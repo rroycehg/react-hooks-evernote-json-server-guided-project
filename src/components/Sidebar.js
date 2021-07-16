@@ -1,11 +1,12 @@
-import React from "react";
+import  React from "react";
 import NoteList from "./NoteList";
 
-function Sidebar() {
-  return (
+function Sidebar(props) {
+  
+return (
     <div className="master-detail-element sidebar">
-      <NoteList />
-      <button>New</button>
+      <NoteList notes={props.notes} selectCurrentNote={props.selectCurrentNote}/>
+      <button onClick={props.makeNewPost}>New</button>
     </div>
   );
 }
